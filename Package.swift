@@ -2,6 +2,8 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
+let version = "0.0.2"
+
 let package = Package(
   name: "gRPC",
   products: [
@@ -40,11 +42,13 @@ let package = Package(
     ),
     .binaryTarget(
         name: "gRPC-Core",
-        path: "../../Downloads/Firebase 2/FirebaseFirestore/gRPC-Core.xcframework"
-    ),
+        url: "https://github.com/ncooke3/grpc-ios/releases/download/\(version)/gRPC-Core.zip",
+        checksum: "c2ef0601edf532a8bbdf77c3a10c2f16417814fff1275e7a873287099d3528bb"
+    )
     .binaryTarget(
         name: "gRPC-C++",
-        path: "../../Downloads/Firebase 2/FirebaseFirestore/gRPC-C++.xcframework"
+        url: "https://github.com/ncooke3/grpc-ios/releases/download/\(version)/gRPC-C++.zip",
+        checksum: "3c0b76aa3a6a2a7a9ca1a1db783f527c90855d31b9fbb9c58e31ec5e4d8e2f36"
     ),
     .testTarget(
       name: "build-test",

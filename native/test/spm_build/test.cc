@@ -16,13 +16,14 @@
  *
  */
 
-#include "grpcpp/channel.h"
-#include "grpcpp/client_context.h"
-#include "grpcpp/completion_queue.h"
-#include "grpcpp/create_channel.h"
-#include "grpcpp/generic/generic_stub.h"
-#include "grpcpp/grpcpp.h"
-#include "grpcpp/support/byte_buffer.h"
-#include "grpcpp/support/status.h"
-#include "grpcpp/support/status_code_enum.h"
-#include "grpcpp/support/string_ref.h"
+// NOTE(ncooke3): Change `grpcpp` to `grpc-c++`.
+#include "grpc-c++/channel.h"
+#include "grpc-c++/client_context.h"
+#include "grpc-c++/completion_queue.h"
+#include "grpc-c++/create_channel.h"
+#include "grpc-c++/generic/generic_stub.h"
+#include "grpc-c++/grpcpp.h"
+#include "grpc-c++/support/byte_buffer.h"
+#include "grpc-c++/support/status.h"
+#include "grpc-c++/support/status_code_enum.h"
+#include "grpc-c++/support/string_ref.h"

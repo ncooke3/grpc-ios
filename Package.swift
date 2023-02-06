@@ -44,7 +44,7 @@ let package = Package(
         name: "gRPC-Core",
         url: "https://github.com/ncooke3/grpc-ios/releases/download/\(version)/gRPC-Core.zip",
         checksum: "c2ef0601edf532a8bbdf77c3a10c2f16417814fff1275e7a873287099d3528bb"
-    )
+    ),
     .binaryTarget(
         name: "gRPC-C++",
         url: "https://github.com/ncooke3/grpc-ios/releases/download/\(version)/gRPC-C++.zip",

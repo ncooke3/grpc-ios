@@ -21,7 +21,14 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/ncooke3/abseil-cpp-SwiftPM.git", .exact("0.0.2"))
+    .package(
+        url: "https://github.com/ncooke3/abseil-cpp-SwiftPM.git",
+        .exact("0.0.2")
+    ),
+    .package(
+        url: "https://github.com/ncooke3/boringSSL-SwiftPM",
+        .exact("0.0.1")
+    )
   ],
   targets: [
     .target(
@@ -36,7 +43,8 @@ let package = Package(
         dependencies: [
             .target(name: "gRPC-Core"),
             .target(name: "gRPC-C++"),
-            .product(name: "abseil", package: "abseil-cpp-swiftPM")
+            .product(name: "abseil", package: "abseil-cpp-swiftPM"),
+            .product(name: "BoringSSL-GRPC", package: "boringSSL-SwiftPM")
         ],
         path: "gRPC-CPP-Wrapper"
     ),
@@ -54,6 +62,7 @@ let package = Package(
       name: "build-test",
       dependencies: [
         "gRPC-C++",
+        "gRPC-Core",
       ],
       path: "native/test/spm_build"
     ),
